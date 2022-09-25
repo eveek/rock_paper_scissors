@@ -1,34 +1,36 @@
-const gameOptions = ["Rock", "Paper", "Scissors"]
+
+let hunanScore = 0
+let computerScore = 0
+const gameOptions = ["rock", "paper", "scissors"]
 
 function computerChoice(gameOptions){
     return gameOptions[Math.floor(Math.random()*gameOptions.length)]
 }
 
+
 const humanPick = prompt("choose your weapon")
 const computerPick = computerChoice(gameOptions)
 
 function playRound(humanPick, computerPick) {
-    const humanPick = humanPick.toUpperCase()
-    const computerPick = computerPick.toUpperCase()
-
-    if(humanPick == computerPick){
+    if(humanPick.toLowerCase() == computerPick){
         return "It's a tie!"
     } else if(
-        (humanPick == "ROCK" && computerPick == "SCISSORS") ||
-        (humanPick == "PAPER" && computerPick == "ROCK") ||
-        (humanPick == "SCISSORS" && computerPick == "PAPER")
+        (humanPick.toLowerCase() == "rock" && computerPick == "scissors") ||
+        (humanPick.toLowerCase() == "paper" && computerPick == "rock") ||
+        (humanPick.toLowerCase() == "scissors" && computerPick == "paper")
     ){
-        return `You win! ${humanPick} beats ${computerPick}`
+        hunanScore = hunanScore++
+        return `You win! ${humanPick.toLowerCase()} beats ${computerPick}`
     } else if(
-        (computerPick == "ROCK" && humanPick == "SCISSORS") ||
-        (computerPick == "PAPER" && humanPick == "ROCK") ||
-        (computerPick == "SCISSORS" && humanPick == "PAPER")
+        (computerPick == "rock" && humanPick.toLowerCase() == "scissors") ||
+        (computerPick == "paper" && humanPick.toLowerCase() == "rock") ||
+        (computerPick == "scissors" && humanPick.toLowerCase() == "paper")
     ){
-        return `You lose! ${computerPick} beats ${humanPick}`
+        computerScore = computerScore++
+        return `You lose! ${computerPick} beats ${humanPick.toLowerCase()}`
+    } else {
+        return "Incorrect input"
     }
 }
 
-// let test1 = "roCk"
-// let test2 = "ROCK"
-
-// console.log(playRound(test1, test2))
+console.log(playRound(humanPick, computerPick))
