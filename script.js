@@ -37,7 +37,7 @@ function game(){
     console.log(playRound(humanPick, computerPick));
 }
 
-function gamePlay(){
+function playGame(){
     alert("Are you ready? Choose your weapon and save the world.");
     for (let i = 0; i < 5; i++){
     game();
@@ -51,6 +51,6 @@ function gamePlay(){
     }
 }
 
-gamePlay();
+playGame();
 
 
