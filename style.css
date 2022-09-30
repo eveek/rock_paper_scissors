@@ -324,4 +324,12 @@ div.wrapper{
     div.wrapper{
         margin-top: 40px;
     }
+
+    .main .game-pick-display{
+        margin-top: 15vh;
+    }
+
+    .rule-modal div{
+        margin-bottom: 0;
+    }
 }
