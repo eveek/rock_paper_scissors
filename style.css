@@ -4,11 +4,15 @@
     margin: 0;
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    height: 100vh;
     background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat: no-repeat;
-    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-position: center;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -21,9 +25,10 @@ div.wrapper{
 .wrapper .head{
     width: 700px;
     height: fit-content;
-    border: 2px solid hsl(217, 16%, 45%);
+    border: 3px solid hsl(217, 16%, 45%);
     border-radius: 15px;
     padding: 20px;
+    padding-left: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +68,7 @@ div.wrapper{
     font-size: 15px;
     letter-spacing: 2px;
     color: white;
-    border: 1px solid white;
+    border: 2px solid hsl(217, 16%, 45%);
     background-color: transparent;
     border-radius: 7px;
     position: absolute;
@@ -82,7 +87,7 @@ div.wrapper{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 98;
 }
 
 .rule-modal div {
@@ -138,6 +143,7 @@ div.wrapper{
     
     .wrapper .head{
         padding: 3vw;
+        padding-left: 4.5vw;
         border-radius: 1vw;
         width: 85vw;
         margin-top: 5vw;
@@ -178,5 +184,45 @@ div.wrapper{
         height: 100vh;
         width: 100vw;
         border-radius: 0;
+        padding: 30px 0px;
+        /* position: relative; */
+    }
+
+    .modal-close{
+        position: absolute;
+        bottom: 70px;
+        left: calc(50vw - 10px);
+    }
+
+    .rule-modal div{
+        justify-content: center;
+        margin-top: 70px;
+        margin-bottom: 120px;
+    }
+
+    .wrapper .head div:last-child{
+        height: 19vw;
+        width: 22vw;
+    }
+
+    .wrapper .head div:last-child span:last-child{
+        line-height: 9vw;
+        font-size: 10vw;
+    }
+
+    .wrapper .head div:last-child span:first-child{
+        font-size: 3vw;
+    }
+
+    .wrapper .head div:first-child img{
+        width: 22vw;
+    }
+
+    .wrapper .head{
+        margin-top: 0px;
+    }
+
+    div.wrapper{
+        margin-top: 40px;
     }
 }
