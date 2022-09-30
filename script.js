@@ -1,3 +1,8 @@
+const ruleModal = document.querySelector(".rule-modal")
+const coverModal = document.querySelector(".modal-cover")
+const closeModal = document.querySelector(".modal-close")
+const ruleButton = document.querySelector(".rule")
+
 
 let hunanScore = 0;
 let computerScore = 0;
@@ -51,6 +56,23 @@ function playGame(){
     }
 }
 
-playGame();
+// playGame();
 
 
+
+
+// MODAL SECTION
+ruleButton.addEventListener("click", ()=>{
+    ruleModal.classList.add("show")
+    coverModal.classList.add("show")
+})
+
+closeModal.addEventListener("click", ()=>{
+    ruleModal.classList.remove("show")
+    coverModal.classList.remove("show")
+})
+
+coverModal.addEventListener("click", ()=>{
+    ruleModal.classList.remove("show")
+    coverModal.classList.remove("show")
+})
