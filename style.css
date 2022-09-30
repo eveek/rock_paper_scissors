@@ -18,8 +18,7 @@ body{
 
 div.wrapper{
     margin: 50px auto;
-    width: 700px;
-    /* border: 2px solid red; */
+    width: fit-content;
 }
 
 .wrapper .head{
@@ -133,6 +132,65 @@ div.wrapper{
 
 
 
+.main .game-pick-display{
+    margin: auto;
+    margin-top: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    /* display: none; */
+}
+
+.main .choice-btn{
+    border: 30px solid ;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.main .choice-btn .choice-btn-inner{
+    background-color: hsl(225, 33%, 95%);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 10px rgba(76, 64, 148, 0.208) inset;
+}
+
+.main .choice-btn .choice-btn-inner img{
+    height: auto;
+    width: 45%;
+}
+
+.main .choice-rock{
+    border-color: hsl(349, 70%, 56%);
+    box-shadow: 0px 10px hsl(349, 71%, 40%);
+    bottom: -110px;
+    left: calc(50% - 110px);
+
+}
+
+.main .choice-scissors{
+    border-color: hsl(40, 84%, 53%);
+    box-shadow: 0px 10px hsl(39, 99%, 37%);
+    top: -110px;
+    right: -110px;
+}
+
+.main .choice-paper{
+    border-color: hsl(230, 89%, 65%);
+    box-shadow: 0px 10px hsl(230, 59%, 50%);
+    top: -110px;
+    left: -110px;
+}
+
+
+
+
 
 
 @media only screen and (max-width: 768px) {
@@ -169,6 +227,48 @@ div.wrapper{
         height: auto;
         width: 20vw;
     }
+
+}
+
+
+@media only screen and (max-width: 600px){
+    .main .choice-btn{
+        width: 37vw;
+        height: 37vw;
+        border-width: 5vw;
+        display: grid;
+        place-items: center;
+    }
+
+    .main .choice-btn .choice-btn-inner{
+        height: 101%;
+        width: 101%;
+        box-shadow: 0px 2vw rgba(76, 64, 148, 0.208) inset;
+    }
+
+    .main .choice-paper{
+        box-shadow: 0px 2vw hsl(230, 59%, 50%);
+        top: -18.5vw;
+        left: -18.5vw;
+    }
+
+    .main .choice-rock{
+        box-shadow: 0px 2vw hsl(349, 71%, 40%);
+        bottom: -18.5vw;
+        left: calc(50% - 18.5vw);
+    }
+
+    .main .choice-scissors{
+        box-shadow: 0px 2vw hsl(39, 99%, 37%);
+        top: -18.5vw;
+        right: -18.5vw;
+    }
+
+    .main .game-pick-display .triangle{
+        height: auto;
+        width: 50vw;
+        /* outline: 5px solid black; */
+    }
 }
 
 
@@ -185,12 +285,11 @@ div.wrapper{
         width: 100vw;
         border-radius: 0;
         padding: 30px 0px;
-        /* position: relative; */
     }
 
     .modal-close{
         position: absolute;
-        bottom: 70px;
+        bottom: 50px;
         left: calc(50vw - 10px);
     }
 
