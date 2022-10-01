@@ -131,7 +131,7 @@ div.wrapper{
 
 
 
-
+/* FIRST PAGE */
 .main .game-pick-display{
     margin: auto;
     margin-top: 180px;
@@ -139,7 +139,7 @@ div.wrapper{
     display: flex;
     justify-content: center;
     width: fit-content;
-    /* display: none; */
+    display: none;
 }
 
 .main .choice-btn{
@@ -147,8 +147,11 @@ div.wrapper{
     height: 220px;
     width: 220px;
     border-radius: 50%;
-    position: absolute;
     cursor: pointer;
+}
+
+.main .game-pick-display .choice-btn{
+    position: absolute;
 }
 
 .main .choice-btn .choice-btn-inner{
@@ -166,31 +169,106 @@ div.wrapper{
     width: 45%;
 }
 
-.main .choice-rock{
-    border-color: hsl(349, 70%, 56%);
-    box-shadow: 0px 10px hsl(349, 71%, 40%);
+.main .game-pick-display .choice-rock{
     bottom: -110px;
     left: calc(50% - 110px);
 
 }
 
+.main .choice-rock{
+    border-color: hsl(349, 70%, 56%);
+    box-shadow: 0px 10px hsl(349, 71%, 40%);
+}
+
+.main .game-pick-display .choice-scissors{
+    top: -110px;
+    right: -110px;
+}
+
 .main .choice-scissors{
     border-color: hsl(40, 84%, 53%);
     box-shadow: 0px 10px hsl(39, 99%, 37%);
+}
+
+.main .game-pick-display .choice-paper{
     top: -110px;
-    right: -110px;
+    left: -110px;
 }
 
 .main .choice-paper{
     border-color: hsl(230, 89%, 65%);
     box-shadow: 0px 10px hsl(230, 59%, 50%);
-    top: -110px;
-    left: -110px;
+}
+
+
+
+/* SECOND PAGE */
+.main .game-round-display{
+    display: flex;
+    width: 970px;
+    justify-content: space-between;
+    margin-top: 80px;
+    position: relative;
+}
+
+.main .game-round-display .player-box{
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main .game-round-display .player-box span{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.main .game-round-display .choice-btn{
+    height: 300px;
+    width: 300px;
+}
+
+.main .game-round-display .declare-box{
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 116.64px);
+    display: flex;
+    flex-direction: column;
+}
+
+.main .game-round-display .declare-box span{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+.main .game-round-display .declare-box button{
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: hsl(349, 70%, 56%);
 }
 
 
 
 
+@media only screen and (max-width: 1064px){
+    .main .game-round-display{
+        width: 800px;
+    }
+
+    .main .game-round-display .declare-box{
+        bottom: -200px;
+    }
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -240,25 +318,25 @@ div.wrapper{
         place-items: center;
     }
 
-    .main .choice-btn .choice-btn-inner{
+    .main .game-pick-display .choice-btn .choice-btn-inner{
         height: 101%;
         width: 101%;
         box-shadow: 0px 2vw rgba(76, 64, 148, 0.208) inset;
     }
 
-    .main .choice-paper{
+    .main .game-pick-display .choice-paper{
         box-shadow: 0px 2vw hsl(230, 59%, 50%);
         top: -18.5vw;
         left: -18.5vw;
     }
 
-    .main .choice-rock{
+    .main .game-pick-display .choice-rock{
         box-shadow: 0px 2vw hsl(349, 71%, 40%);
         bottom: -18.5vw;
         left: calc(50% - 18.5vw);
     }
 
-    .main .choice-scissors{
+    .main .game-pick-display .choice-scissors{
         box-shadow: 0px 2vw hsl(39, 99%, 37%);
         top: -18.5vw;
         right: -18.5vw;
