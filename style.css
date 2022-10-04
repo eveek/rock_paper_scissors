@@ -18,9 +18,13 @@ body{
 div.wrapper{
     margin: 50px auto;
     width: fit-content;
+    animation-name: drop;
+    animation-duration: 1s;
+    
 }
 
 .wrapper .head{
+    /* margin-top: -250px; */
     width: 700px;
     height: fit-content;
     border: 3px solid hsl(217, 16%, 45%);
@@ -288,14 +292,20 @@ div.wrapper{
 
 /* ANIMATION */
 @keyframes show{
-    from{filter: opacity(0);};
+    from{filter: opacity(0);}
     to{filter: opacity(1);}
 }
 
 @keyframes zoom-in{
     0% {transform: scale(20);}
-    80% {transform: scale(0.8);}
+    70% {transform: scale(0.8);}
     100% {transform: scale(1);}
+}
+
+@keyframes drop{
+    0% {margin-top: -250px;}
+    70% {margin-top: 100px;}
+    100% {margin-top: 50px;}
 }
 
 
@@ -544,6 +554,12 @@ div.wrapper{
     .rule-modal div{
         margin-bottom: 0;
     }
+
+    @keyframes drop {
+        0% {margin-top: -250px;}
+        70% {margin-top: 100px;}
+        100% {margin-top: 10vw;}
+    }
 }
 
 
@@ -565,4 +581,10 @@ div.wrapper{
         .main .game-round-display .declare-box p{
             font-size: 5vw;
         }
+}
+
+@media only screen and (max-width: 458px){
+    .main .game-round-display .declare-box{
+        bottom: -40vw;
+    }
 }

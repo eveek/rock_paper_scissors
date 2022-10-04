@@ -61,7 +61,7 @@ function playRound(humanPick, computerPick) {
 function updateRoundDisplay(humanPick, computerPick){
     youPick.className = "choice-btn";
     housePick.className = "choice-btn";
-    
+
     youPick.classList.add(`choice-${humanPick}`);
     youPick.innerHTML= ""
     youPick.innerHTML= `<div class="choice-btn-inner"><img src="./images/icon-${humanPick}.svg" alt=""></div>`
