@@ -9,7 +9,6 @@ html{
 }
 
 body{
-    -webkit-background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat: no-repeat;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -180,8 +179,8 @@ div.wrapper{
     margin: auto;
     background-color: transparent;
     border-radius: 10px;
-    border: 2px solid hsl(217, 16%, 45%);
-    color: hsl(217, 16%, 45%);
+    border: 2px solid hsl(214, 47%, 23%);
+    color: hsl(214, 47%, 23%);
     cursor: pointer;
 }
 
@@ -200,7 +199,6 @@ div.wrapper{
     display: flex;
     justify-content: center;
     width: fit-content;
-    /* display: none; */
     animation-name: show;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -487,6 +485,25 @@ div.wrapper{
 @media only screen and (max-width: 708px){
     .main .game-round-display{
         width: 500px;
+    }
+}
+
+@media only screen and (max-width: 685px){
+    .end-game{
+        width: 90vw;
+        padding: 6vw;
+        height: 38vw;
+    }
+
+    .end-game span{
+        font-size: 5.5vw;
+    }
+
+    .end-game button{
+        font-size: 3vw;
+        padding: 1.5vw;
+        border-radius: 1.5vw;
+        width: 38vw;
     }
 }
 
