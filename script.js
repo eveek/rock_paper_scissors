@@ -108,7 +108,7 @@ function game(playeSelection){
 }
 
 playButtons.forEach(playButton => playButton.addEventListener("click", () =>{
-    let playeSelection = playButton.attributes.value.textContent
+    let playeSelection = playButton.attributes.id.textContent
 
     game(playeSelection)
 

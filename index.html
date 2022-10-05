@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="head">
+        <div class="head" role="head">
             <div><img src="./images/logo.svg" alt=""></div>
             <div>
                 <span>SCORE</span>
@@ -20,17 +20,17 @@
         </div>
     </div>
 
-    <div class="main wrapper">
+    <div class="main wrapper" role="main">
         <div class="game-pick-display">
             <img src="./images/bg-triangle.svg" alt="" class="triangle">
-            <div class="choice-btn choice-rock play-btn" value="rock" >
-                <div class="choice-btn-inner"><img src="./images/icon-rock.svg" alt=""></div>
+            <div class="choice-btn choice-rock play-btn" id="rock" >
+                <div class="choice-btn-inner"><img src="./images/icon-rock.svg" alt="rock"></div>
             </div>
-            <div class="choice-btn choice-scissors play-btn" value="scissors">
-                <div class="choice-btn-inner"><img src="./images/icon-scissors.svg" alt=""></div>
+            <div class="choice-btn choice-scissors play-btn" id="scissors">
+                <div class="choice-btn-inner"><img src="./images/icon-scissors.svg" alt="scissors"></div>
             </div>
-            <div class="choice-btn choice-paper play-btn" value="paper">
-                <div class="choice-btn-inner"><img src="./images/icon-paper.svg" alt=""></div>
+            <div class="choice-btn choice-paper play-btn" id="paper">
+                <div class="choice-btn-inner"><img src="./images/icon-paper.svg" alt="paper"></div>
             </div>
 
         </div>
@@ -59,7 +59,7 @@
     </div>
 
     <div>
-        <button class="rule">RULES</button>
+        <button class="rule" role="button">RULES</button>
         <div class="rule-modal">
             <div>
                 <span>RULES</span>
