@@ -14,7 +14,7 @@ body{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-div.wrapper{
+.wrapper{
     margin: 50px auto;
     width: fit-content;
     animation-name: drop;

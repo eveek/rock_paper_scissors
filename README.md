@@ -18,6 +18,13 @@ Users should be able to:
 - The game should continue to run until either the player or
   the computer attains a score of 5
 
+  ### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Javascipt
+
 ### What I Learned
 
 - How to use animation in CSS

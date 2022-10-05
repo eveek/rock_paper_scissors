@@ -10,17 +10,17 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="head" role="head">
+    <section role="section" class="wrapper">
+        <div class="head">
             <div><img src="./images/logo.svg" alt=""></div>
             <div>
                 <span>SCORE</span>
                 <span class="score-display">0:0</span>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="main wrapper" role="main">
+    <main class="main wrapper" role="main">
         <div class="game-pick-display">
             <img src="./images/bg-triangle.svg" alt="" class="triangle">
             <div class="choice-btn choice-rock play-btn" id="rock" >
@@ -56,10 +56,10 @@
             </div>
         </div>
 
-    </div>
+    </main>
 
-    <div>
-        <button class="rule" role="button">RULES</button>
+    <section>
+        <button class="rule">RULES</button>
         <div class="rule-modal">
             <div>
                 <span>RULES</span>
@@ -71,12 +71,12 @@
             
         </div>
         <div class="modal-cover"></div>
-    </div>
+    </section>
     
-    <div class="end-game">
+    <section class="end-game">
         <span>CONGRATULATIONS! YOU WON</span>
         <button>PLAY AGAIN</button>
-    </div>
-    <div class="end-game-cover"></div>
+    </section>
+    <section class="end-game-cover"></section>
 </body>
 </html>
