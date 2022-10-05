@@ -12,6 +12,19 @@ const housePick = document.querySelector(".computer-pick");
 const roundStatus = document.querySelector(".round-status");
 const roundStatusPara = document.querySelector(".round-status-paragraph");
 const repeatButton = document.querySelector(".repeat-btn");
+const gameNd = document.querySelector(".end-game");
+const gameNdCover = document.querySelector(".end-game-cover");
+const playAgainBtn = gameNd.querySelector("button");
+
+playAgainBtn.addEventListener("click", ()=>{
+    gameNd.style.display = "none";
+    gameNdCover.style.display = "none";
+    gameRoundkDisplay.classList.remove("appear");
+    scoreDisplay.textContent = "0:0";
+    humanScore = 0;
+    computerScore = 0;
+    gamePickDisplay.classList.remove("disappear");
+})
 
 
 let humanScore = 0;
@@ -29,6 +42,21 @@ repeatButton.addEventListener("click", ()=> {
     gamePickDisplay.classList.remove("disappear");
     gameRoundkDisplay.classList.remove("appear");
 })
+
+function endGame(){
+    const span = gameNd.querySelector("span");
+    
+    if(humanScore > computerScore){
+        span.style.color = "hsl(230, 89%, 65%)"
+        span.textContent = "CONGRATULATIONS! YOU WON"
+    }else{
+        span.style.color = "hsl(349, 70%, 56%)"
+        span.textContent = "OHH NO! YOU LOST"
+    }
+
+    gameNd.style.display = "flex"
+    gameNdCover.style.display = "block"
+}
 
 
 function playRound(humanPick, computerPick) {
@@ -76,22 +104,21 @@ function game(playeSelection){
     computerPick = computerChoice(gameOptions);
     playRound(humanPick, computerPick);
     updateRoundDisplay(humanPick, computerPick);
+    
 }
 
 playButtons.forEach(playButton => playButton.addEventListener("click", () =>{
     let playeSelection = playButton.attributes.value.textContent
+
     game(playeSelection)
 
     gamePickDisplay.classList.add("disappear");
     gameRoundkDisplay.classList.add("appear");
 
     if(computerScore == 5 || humanScore == 5){
-        if(humanScore > computerScore){
-        console.log(`You won! ${humanScore} - ${computerScore}`);
-    }else{
-        console.log(`You loss! ${computerScore} - ${humanScore}`);
+        setTimeout(endGame, 600)
     }
-    }
+
 }))
 
 
