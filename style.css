@@ -24,7 +24,6 @@ div.wrapper{
 }
 
 .wrapper .head{
-    /* margin-top: -250px; */
     width: 700px;
     height: fit-content;
     border: 3px solid hsl(217, 16%, 45%);
@@ -160,6 +159,10 @@ div.wrapper{
     position: absolute;
 }
 
+.main .game-pick-display .choice-btn:hover{
+    transform: scale(1.1);
+}
+
 .main .choice-btn .choice-btn-inner{
     background-color: hsl(225, 33%, 95%);
     height: 100%;
@@ -247,13 +250,15 @@ div.wrapper{
 .main .game-round-display .declare-box{
     position: absolute;
     bottom: 100px;
-    left: calc(50% - 116.64px);
+    transform: translateX(-50%);
+    left: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .main .game-round-display .declare-box span{
     font-size: 60px;
+    text-align: center;
     font-weight: 700;
     color: white;
 }
@@ -342,10 +347,6 @@ div.wrapper{
         font-size: 12px;
     }
 
-    .main .game-round-display .declare-box{
-        left: calc(50% - 87.48px);
-    }
-
     .main .game-round-display .declare-box p{
         font-size: 18px;
     }
@@ -366,11 +367,10 @@ div.wrapper{
 
     .main .game-round-display .declare-box {
         bottom: -200px;
-        left: calc(50% - 136.08px);
     }
 
     .main .game-round-display .declare-box span {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .main .game-round-display .declare-box button {
@@ -499,6 +499,10 @@ div.wrapper{
     .rule{
         right: calc(50vw - 61.01px);
     }
+
+    .main .game-round-display .declare-box{
+        width: 50vw;
+    }
 }
 
 @media only screen and (max-width: 470px){
@@ -565,7 +569,7 @@ div.wrapper{
 
 @media only screen and (max-width: 458px){
     .main .game-round-display .declare-box{
-        left: calc(50% - 28.89vw);
+        width: 60vw;
     }
 
     .main .game-round-display .declare-box span {
