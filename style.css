@@ -12,6 +12,7 @@ body{
     background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat: no-repeat;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    /* position: fixed; */
 }
 
 .wrapper{
@@ -671,5 +672,16 @@ body{
 @media only screen and (max-width: 458px){
     .main .game-round-display .declare-box{
         bottom: -40vw;
+    }
+}
+
+
+@media only screen and (max-height: 610px){
+    html{
+        height: 110%;
+    }
+
+    .rule{
+        bottom: -25px;
     }
 }
