@@ -683,6 +683,9 @@ body{
 
     .rule{
         bottom: -25px;
+        font-size: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
 }
 
