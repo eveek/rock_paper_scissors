@@ -685,3 +685,9 @@ body{
         bottom: -25px;
     }
 }
+
+@media only screen and (max-height: 542px){
+    .rule{
+        bottom: -35px;
+    }
+}
